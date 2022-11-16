@@ -1,0 +1,42 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.60102",
+   "Default View_TopLeft":"-749,10",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS-threadsafe
+#  -string -flagsOSRD
+preplace port port-id_hSync_0 -pg 1 -lvl 0 -x -10 -y 580 -defaultsOSRD
+preplace port port-id_vSync_0 -pg 1 -lvl 0 -x -10 -y 640 -defaultsOSRD
+preplace port port-id_vdEnable_0 -pg 1 -lvl 0 -x -10 -y 670 -defaultsOSRD
+preplace port port-id_clock_0 -pg 1 -lvl 0 -x -10 -y 610 -defaultsOSRD
+preplace port port-id_select_vid_0 -pg 1 -lvl 0 -x -10 -y 540 -defaultsOSRD
+preplace portBus pData_0 -pg 1 -lvl 0 -x -10 -y 700 -defaultsOSRD
+preplace portBus out_pData_0 -pg 1 -lvl 3 -x 690 -y 660 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 2 -x 570 -y 150 -defaultsOSRD
+preplace inst blk_mem_gen_1 -pg 1 -lvl 2 -x 570 -y 430 -defaultsOSRD
+preplace inst blk_mem_gen_2 -pg 1 -lvl 2 -x 570 -y 850 -defaultsOSRD
+preplace inst gaussian_blur_0 -pg 1 -lvl 1 -x 220 -y 620 -defaultsOSRD
+preplace netloc blk_mem_gen_0_doutb 1 0 2 40 230 NJ
+preplace netloc blk_mem_gen_1_doutb 1 0 2 50 760 450J
+preplace netloc blk_mem_gen_2_doutb 1 0 2 60 930 N
+preplace netloc clock_0_1 1 0 2 20 770 420
+preplace netloc gaussian_blur_0_buf_0_write 1 1 1 380 130n
+preplace netloc gaussian_blur_0_buf_0_write_en 1 1 1 390 150n
+preplace netloc gaussian_blur_0_buf_1_write 1 1 1 400 410n
+preplace netloc gaussian_blur_0_buf_1_write_en 1 1 1 440 430n
+preplace netloc gaussian_blur_0_buf_2_write 1 1 1 430 590n
+preplace netloc gaussian_blur_0_buf_2_write_en 1 1 1 380 670n
+preplace netloc gaussian_blur_0_mem_addr 1 1 1 410 90n
+preplace netloc gaussian_blur_0_out_pData 1 1 2 460J 660 NJ
+preplace netloc hSync_0_1 1 0 1 40J 580n
+preplace netloc pData_0_1 1 0 1 NJ 700
+preplace netloc vSync_0_1 1 0 1 30J 640n
+preplace netloc vdEnable_0_1 1 0 1 10J 670n
+preplace netloc select_vid_0_1 1 0 1 N 540
+levelinfo -pg 1 -10 220 570 690
+pagesize -pg 1 -db -bbox -sgen -150 0 860 990
+"
+}
+{
+   "da_board_cnt":"2"
+}

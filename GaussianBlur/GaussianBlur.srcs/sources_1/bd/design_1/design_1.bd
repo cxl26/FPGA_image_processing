@@ -1,0 +1,631 @@
+{
+    "design": {
+        "design_info": {
+            "boundary_crc": "0x99E0EA90B7FCA304",
+            "device": "xc7z020clg400-1",
+            "gen_directory": "../../../../GaussianBlur.gen/sources_1/bd/design_1",
+            "name": "design_1",
+            "rev_ctrl_bd_flag": "RevCtrlBdOff",
+            "synth_flow_mode": "Hierarchical",
+            "tool_version": "2021.2",
+            "validated": "true"
+        },
+        "design_tree": {
+            "dvi2rgb_0": "",
+            "rgb2dvi_0": "",
+            "clk_wiz_0": "",
+            "xlconstant_0": "",
+            "blk_mem_gen_0": "",
+            "blk_mem_gen_1": "",
+            "blk_mem_gen_2": "",
+            "gaussian_blur_0": ""
+        },
+        "interface_ports": {
+            "TMDS_0": {
+                "mode": "Slave",
+                "vlnv_bus_definition": "digilentinc.com:interface:tmds:1.0",
+                "vlnv": "digilentinc.com:interface:tmds_rtl:1.0"
+            },
+            "TMDS_1": {
+                "mode": "Master",
+                "vlnv_bus_definition": "digilentinc.com:interface:tmds:1.0",
+                "vlnv": "digilentinc.com:interface:tmds_rtl:1.0"
+            },
+            "DDC_0": {
+                "mode": "Master",
+                "vlnv_bus_definition": "xilinx.com:interface:iic:1.0",
+                "vlnv": "xilinx.com:interface:iic_rtl:1.0"
+            }
+        },
+        "ports": {
+            "sys_clock": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                    "CLK_DOMAIN": {
+                        "value": "design_1_sys_clock",
+                        "value_src": "default"
+                    },
+                    "FREQ_HZ": {
+                        "value": "125000000"
+                    },
+                    "FREQ_TOLERANCE_HZ": {
+                        "value": "0",
+                        "value_src": "default"
+                    },
+                    "INSERT_VIP": {
+                        "value": "0",
+                        "value_src": "default"
+                    },
+                    "PHASE": {
+                        "value": "0.0"
+                    }
+                }
+            },
+            "reset_rtl": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                    "INSERT_VIP": {
+                        "value": "0",
+                        "value_src": "default"
+                    },
+                    "POLARITY": {
+                        "value": "ACTIVE_HIGH"
+                    }
+                }
+            },
+            "pixel_clk_status": {
+                "direction": "O"
+            },
+            "dout_0": {
+                "direction": "O",
+                "left": "0",
+                "right": "0"
+            },
+            "select_vid_0": {
+                "direction": "I"
+            }
+        },
+        "components": {
+            "dvi2rgb_0": {
+                "vlnv": "digilentinc.com:ip:dvi2rgb:2.0",
+                "xci_name": "design_1_dvi2rgb_0_0",
+                "xci_path": "ip\\design_1_dvi2rgb_0_0\\design_1_dvi2rgb_0_0.xci",
+                "inst_hier_path": "dvi2rgb_0",
+                "parameters": {
+                    "kAddBUFG": {
+                        "value": "true"
+                    },
+                    "kClkRange": {
+                        "value": "1"
+                    },
+                    "kDebug": {
+                        "value": "true"
+                    },
+                    "kEmulateDDC": {
+                        "value": "true"
+                    },
+                    "kEnableSerialClkOutput": {
+                        "value": "false"
+                    },
+                    "kRstActiveHigh": {
+                        "value": "false"
+                    }
+                }
+            },
+            "rgb2dvi_0": {
+                "vlnv": "digilentinc.com:ip:rgb2dvi:1.4",
+                "xci_name": "design_1_rgb2dvi_0_0",
+                "xci_path": "ip\\design_1_rgb2dvi_0_0\\design_1_rgb2dvi_0_0.xci",
+                "inst_hier_path": "rgb2dvi_0",
+                "parameters": {
+                    "kClkPrimitive": {
+                        "value": "MMCM"
+                    },
+                    "kClkRange": {
+                        "value": "1"
+                    },
+                    "kGenerateSerialClk": {
+                        "value": "true"
+                    },
+                    "kRstActiveHigh": {
+                        "value": "false"
+                    }
+                }
+            },
+            "clk_wiz_0": {
+                "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+                "xci_name": "design_1_clk_wiz_0_0",
+                "xci_path": "ip\\design_1_clk_wiz_0_0\\design_1_clk_wiz_0_0.xci",
+                "inst_hier_path": "clk_wiz_0",
+                "parameters": {
+                    "CLKOUT1_DRIVES": {
+                        "value": "BUFG"
+                    },
+                    "CLKOUT1_JITTER": {
+                        "value": "109.241"
+                    },
+                    "CLKOUT1_REQUESTED_OUT_FREQ": {
+                        "value": "200.000"
+                    },
+                    "CLKOUT2_DRIVES": {
+                        "value": "BUFG"
+                    },
+                    "CLKOUT3_DRIVES": {
+                        "value": "BUFG"
+                    },
+                    "CLKOUT4_DRIVES": {
+                        "value": "BUFG"
+                    },
+                    "CLKOUT5_DRIVES": {
+                        "value": "BUFG"
+                    },
+                    "CLKOUT6_DRIVES": {
+                        "value": "BUFG"
+                    },
+                    "CLKOUT7_DRIVES": {
+                        "value": "BUFG"
+                    },
+                    "CLK_IN1_BOARD_INTERFACE": {
+                        "value": "sys_clock"
+                    },
+                    "MMCM_BANDWIDTH": {
+                        "value": "OPTIMIZED"
+                    },
+                    "MMCM_CLKFBOUT_MULT_F": {
+                        "value": "8"
+                    },
+                    "MMCM_CLKIN2_PERIOD": {
+                        "value": "10.0"
+                    },
+                    "MMCM_CLKOUT0_DIVIDE_F": {
+                        "value": "5"
+                    },
+                    "MMCM_COMPENSATION": {
+                        "value": "ZHOLD"
+                    },
+                    "PRIMITIVE": {
+                        "value": "PLL"
+                    },
+                    "USE_BOARD_FLOW": {
+                        "value": "true"
+                    }
+                }
+            },
+            "xlconstant_0": {
+                "vlnv": "xilinx.com:ip:xlconstant:1.1",
+                "xci_name": "design_1_xlconstant_0_0",
+                "xci_path": "ip\\design_1_xlconstant_0_0\\design_1_xlconstant_0_0.xci",
+                "inst_hier_path": "xlconstant_0"
+            },
+            "blk_mem_gen_0": {
+                "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+                "xci_name": "design_1_blk_mem_gen_0_0",
+                "xci_path": "ip\\design_1_blk_mem_gen_0_0\\design_1_blk_mem_gen_0_0.xci",
+                "inst_hier_path": "blk_mem_gen_0",
+                "parameters": {
+                    "Assume_Synchronous_Clk": {
+                        "value": "false"
+                    },
+                    "Enable_32bit_Address": {
+                        "value": "false"
+                    },
+                    "Enable_A": {
+                        "value": "Always_Enabled"
+                    },
+                    "Enable_B": {
+                        "value": "Always_Enabled"
+                    },
+                    "Memory_Type": {
+                        "value": "Simple_Dual_Port_RAM"
+                    },
+                    "Operating_Mode_A": {
+                        "value": "WRITE_FIRST"
+                    },
+                    "Port_A_Write_Rate": {
+                        "value": "50"
+                    },
+                    "Port_B_Clock": {
+                        "value": "100"
+                    },
+                    "Port_B_Enable_Rate": {
+                        "value": "100"
+                    },
+                    "Read_Width_B": {
+                        "value": "24"
+                    },
+                    "Register_PortB_Output_of_Memory_Primitives": {
+                        "value": "true"
+                    },
+                    "Use_Byte_Write_Enable": {
+                        "value": "false"
+                    },
+                    "Use_RSTB_Pin": {
+                        "value": "false"
+                    },
+                    "Write_Depth_A": {
+                        "value": "1300"
+                    },
+                    "Write_Width_A": {
+                        "value": "24"
+                    },
+                    "Write_Width_B": {
+                        "value": "24"
+                    },
+                    "use_bram_block": {
+                        "value": "Stand_Alone"
+                    }
+                }
+            },
+            "blk_mem_gen_1": {
+                "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+                "xci_name": "design_1_blk_mem_gen_1_0",
+                "xci_path": "ip\\design_1_blk_mem_gen_1_0\\design_1_blk_mem_gen_1_0.xci",
+                "inst_hier_path": "blk_mem_gen_1",
+                "parameters": {
+                    "Enable_32bit_Address": {
+                        "value": "false"
+                    },
+                    "Enable_A": {
+                        "value": "Always_Enabled"
+                    },
+                    "Enable_B": {
+                        "value": "Always_Enabled"
+                    },
+                    "Memory_Type": {
+                        "value": "Simple_Dual_Port_RAM"
+                    },
+                    "Operating_Mode_A": {
+                        "value": "WRITE_FIRST"
+                    },
+                    "Port_B_Clock": {
+                        "value": "100"
+                    },
+                    "Port_B_Enable_Rate": {
+                        "value": "100"
+                    },
+                    "Read_Width_B": {
+                        "value": "24"
+                    },
+                    "Register_PortB_Output_of_Memory_Primitives": {
+                        "value": "true"
+                    },
+                    "Use_Byte_Write_Enable": {
+                        "value": "false"
+                    },
+                    "Use_RSTB_Pin": {
+                        "value": "false"
+                    },
+                    "Write_Depth_A": {
+                        "value": "1300"
+                    },
+                    "Write_Width_A": {
+                        "value": "24"
+                    },
+                    "Write_Width_B": {
+                        "value": "24"
+                    },
+                    "use_bram_block": {
+                        "value": "Stand_Alone"
+                    }
+                }
+            },
+            "blk_mem_gen_2": {
+                "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+                "xci_name": "design_1_blk_mem_gen_2_0",
+                "xci_path": "ip\\design_1_blk_mem_gen_2_0\\design_1_blk_mem_gen_2_0.xci",
+                "inst_hier_path": "blk_mem_gen_2",
+                "parameters": {
+                    "Enable_32bit_Address": {
+                        "value": "false"
+                    },
+                    "Enable_A": {
+                        "value": "Always_Enabled"
+                    },
+                    "Enable_B": {
+                        "value": "Always_Enabled"
+                    },
+                    "Memory_Type": {
+                        "value": "Simple_Dual_Port_RAM"
+                    },
+                    "Operating_Mode_A": {
+                        "value": "WRITE_FIRST"
+                    },
+                    "Port_B_Clock": {
+                        "value": "100"
+                    },
+                    "Port_B_Enable_Rate": {
+                        "value": "100"
+                    },
+                    "Read_Width_B": {
+                        "value": "24"
+                    },
+                    "Register_PortB_Output_of_Memory_Primitives": {
+                        "value": "true"
+                    },
+                    "Use_Byte_Write_Enable": {
+                        "value": "false"
+                    },
+                    "Write_Depth_A": {
+                        "value": "1300"
+                    },
+                    "Write_Width_A": {
+                        "value": "24"
+                    },
+                    "Write_Width_B": {
+                        "value": "24"
+                    },
+                    "use_bram_block": {
+                        "value": "Stand_Alone"
+                    }
+                }
+            },
+            "gaussian_blur_0": {
+                "vlnv": "xilinx.com:module_ref:gaussian_blur:1.0",
+                "xci_name": "design_1_gaussian_blur_0_0",
+                "xci_path": "ip\\design_1_gaussian_blur_0_0\\design_1_gaussian_blur_0_0.xci",
+                "inst_hier_path": "gaussian_blur_0",
+                "reference_info": {
+                    "ref_type": "hdl",
+                    "ref_name": "gaussian_blur",
+                    "boundary_crc": "0x0"
+                },
+                "ports": {
+                    "select_vid": {
+                        "direction": "I"
+                    },
+                    "buf_0_read": {
+                        "direction": "I",
+                        "left": "23",
+                        "right": "0"
+                    },
+                    "buf_1_read": {
+                        "direction": "I",
+                        "left": "23",
+                        "right": "0"
+                    },
+                    "buf_2_read": {
+                        "direction": "I",
+                        "left": "23",
+                        "right": "0"
+                    },
+                    "buf_0_write": {
+                        "direction": "O",
+                        "left": "23",
+                        "right": "0"
+                    },
+                    "buf_1_write": {
+                        "direction": "O",
+                        "left": "23",
+                        "right": "0"
+                    },
+                    "buf_2_write": {
+                        "direction": "O",
+                        "left": "23",
+                        "right": "0"
+                    },
+                    "mem_addr": {
+                        "direction": "O",
+                        "left": "10",
+                        "right": "0"
+                    },
+                    "buf_0_write_en": {
+                        "direction": "O"
+                    },
+                    "buf_1_write_en": {
+                        "direction": "O"
+                    },
+                    "buf_2_write_en": {
+                        "direction": "O"
+                    },
+                    "clock": {
+                        "type": "clk",
+                        "direction": "I",
+                        "parameters": {
+                            "CLK_DOMAIN": {
+                                "value": "design_1_dvi2rgb_0_0_PixelClk",
+                                "value_src": "default_prop"
+                            }
+                        }
+                    },
+                    "hSync": {
+                        "direction": "I"
+                    },
+                    "vSync": {
+                        "direction": "I"
+                    },
+                    "vdEnable": {
+                        "direction": "I"
+                    },
+                    "pData": {
+                        "direction": "I",
+                        "left": "23",
+                        "right": "0"
+                    },
+                    "out_pData": {
+                        "direction": "O",
+                        "left": "23",
+                        "right": "0"
+                    }
+                }
+            }
+        },
+        "interface_nets": {
+            "TMDS_0_1": {
+                "interface_ports": [
+                    "TMDS_0",
+                    "dvi2rgb_0/TMDS"
+                ]
+            },
+            "dvi2rgb_0_DDC": {
+                "interface_ports": [
+                    "DDC_0",
+                    "dvi2rgb_0/DDC"
+                ]
+            },
+            "rgb2dvi_0_TMDS": {
+                "interface_ports": [
+                    "TMDS_1",
+                    "rgb2dvi_0/TMDS"
+                ]
+            }
+        },
+        "nets": {
+            "blk_mem_gen_0_doutb": {
+                "ports": [
+                    "blk_mem_gen_0/doutb",
+                    "gaussian_blur_0/buf_0_read"
+                ]
+            },
+            "blk_mem_gen_1_doutb": {
+                "ports": [
+                    "blk_mem_gen_1/doutb",
+                    "gaussian_blur_0/buf_1_read"
+                ]
+            },
+            "blk_mem_gen_2_doutb": {
+                "ports": [
+                    "blk_mem_gen_2/doutb",
+                    "gaussian_blur_0/buf_2_read"
+                ]
+            },
+            "clk_wiz_0_clk_out1": {
+                "ports": [
+                    "clk_wiz_0/clk_out1",
+                    "dvi2rgb_0/RefClk"
+                ]
+            },
+            "clk_wiz_0_locked": {
+                "ports": [
+                    "clk_wiz_0/locked",
+                    "dvi2rgb_0/aRst_n"
+                ]
+            },
+            "dvi2rgb_0_PixelClk": {
+                "ports": [
+                    "dvi2rgb_0/PixelClk",
+                    "rgb2dvi_0/PixelClk",
+                    "blk_mem_gen_2/clkb",
+                    "blk_mem_gen_1/clkb",
+                    "blk_mem_gen_0/clkb",
+                    "blk_mem_gen_0/clka",
+                    "blk_mem_gen_2/clka",
+                    "blk_mem_gen_1/clka",
+                    "gaussian_blur_0/clock"
+                ]
+            },
+            "dvi2rgb_0_aPixelClkLckd": {
+                "ports": [
+                    "dvi2rgb_0/aPixelClkLckd",
+                    "rgb2dvi_0/aRst_n",
+                    "pixel_clk_status"
+                ]
+            },
+            "dvi2rgb_0_vid_pData": {
+                "ports": [
+                    "dvi2rgb_0/vid_pData",
+                    "gaussian_blur_0/pData"
+                ]
+            },
+            "dvi2rgb_0_vid_pHSync": {
+                "ports": [
+                    "dvi2rgb_0/vid_pHSync",
+                    "rgb2dvi_0/vid_pHSync",
+                    "gaussian_blur_0/hSync"
+                ]
+            },
+            "dvi2rgb_0_vid_pVDE": {
+                "ports": [
+                    "dvi2rgb_0/vid_pVDE",
+                    "rgb2dvi_0/vid_pVDE",
+                    "gaussian_blur_0/vdEnable"
+                ]
+            },
+            "dvi2rgb_0_vid_pVSync": {
+                "ports": [
+                    "dvi2rgb_0/vid_pVSync",
+                    "rgb2dvi_0/vid_pVSync",
+                    "gaussian_blur_0/vSync"
+                ]
+            },
+            "gaussian_blur_0_buf_0_write": {
+                "ports": [
+                    "gaussian_blur_0/buf_0_write",
+                    "blk_mem_gen_0/dina"
+                ]
+            },
+            "gaussian_blur_0_buf_0_write_en": {
+                "ports": [
+                    "gaussian_blur_0/buf_0_write_en",
+                    "blk_mem_gen_0/wea"
+                ]
+            },
+            "gaussian_blur_0_buf_1_write": {
+                "ports": [
+                    "gaussian_blur_0/buf_1_write",
+                    "blk_mem_gen_1/dina"
+                ]
+            },
+            "gaussian_blur_0_buf_1_write_en": {
+                "ports": [
+                    "gaussian_blur_0/buf_1_write_en",
+                    "blk_mem_gen_1/wea"
+                ]
+            },
+            "gaussian_blur_0_buf_2_write": {
+                "ports": [
+                    "gaussian_blur_0/buf_2_write",
+                    "blk_mem_gen_2/dina"
+                ]
+            },
+            "gaussian_blur_0_buf_2_write_en": {
+                "ports": [
+                    "gaussian_blur_0/buf_2_write_en",
+                    "blk_mem_gen_2/wea"
+                ]
+            },
+            "gaussian_blur_0_mem_addr": {
+                "ports": [
+                    "gaussian_blur_0/mem_addr",
+                    "blk_mem_gen_0/addra",
+                    "blk_mem_gen_1/addra",
+                    "blk_mem_gen_2/addra",
+                    "blk_mem_gen_2/addrb",
+                    "blk_mem_gen_1/addrb",
+                    "blk_mem_gen_0/addrb"
+                ]
+            },
+            "gaussian_blur_0_out_pData": {
+                "ports": [
+                    "gaussian_blur_0/out_pData",
+                    "rgb2dvi_0/vid_pData"
+                ]
+            },
+            "reset_rtl_1": {
+                "ports": [
+                    "reset_rtl",
+                    "clk_wiz_0/reset"
+                ]
+            },
+            "select_vid_0_1": {
+                "ports": [
+                    "select_vid_0",
+                    "gaussian_blur_0/select_vid"
+                ]
+            },
+            "sys_clock_1": {
+                "ports": [
+                    "sys_clock",
+                    "clk_wiz_0/clk_in1"
+                ]
+            },
+            "xlconstant_0_dout": {
+                "ports": [
+                    "xlconstant_0/dout",
+                    "dout_0"
+                ]
+            }
+        }
+    }
+}
